@@ -1,0 +1,26 @@
+[{
+	"id":1,
+	"text":"团队管理",
+	"attributes":{
+		"url":"portal/team-list",
+		"flag" : 0
+	},
+	"children" : [{
+		"id":2,
+		"text":"团队管理111",
+		"attributes":{
+			"url":"portal/team-list",
+			"flag" : 1,
+			"uid" : "d211"
+		}
+	},{
+		
+		"id":3,
+		"text":"团队管理222",
+		"attributes":{
+			"url":"portal/team-list",
+			"flag" : 1,
+			"uid" : "d311"
+		}
+	}]
+}]
