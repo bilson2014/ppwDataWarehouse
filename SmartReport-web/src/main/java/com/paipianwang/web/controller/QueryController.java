@@ -26,11 +26,26 @@ public class QueryController extends AbstractController{
 		return new ModelAndView("/report/query");
 	}
 	
+	@RequestMapping(value = "/view")
+	public ModelAndView queryFontView(final HttpServletRequest request) {
+		
+		return new ModelAndView("/table/query");
+	}
+	
 	// 加载模板
 	@RequestMapping(value = {"/uid/{uid}"})
 	public ModelAndView query(@PathVariable("uid") final String uid,final HttpServletRequest request) {
 		
 		final ModelAndView mv = new ModelAndView("/report/template");
+		ReportingUtils.previewByTemplate(uid, mv, new EasyUIQueryFormView(), request);
+		return mv;
+	}
+	
+	// 加载模板
+	@RequestMapping(value = {"/view/uid/{uid}"})
+	public ModelAndView queryView(@PathVariable("uid") final String uid,final HttpServletRequest request) {
+		
+		final ModelAndView mv = new ModelAndView("/table/template");
 		ReportingUtils.previewByTemplate(uid, mv, new EasyUIQueryFormView(), request);
 		return mv;
 	}

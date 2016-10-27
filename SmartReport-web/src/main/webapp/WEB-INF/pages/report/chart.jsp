@@ -84,7 +84,7 @@
 	<!-- MetaDataColumn end -->
 	
 	<!-- chart start -->
-	<div id="chart1" style="height: 345px; border: 1px solid #ccc;">${message}</div>
+	<div id="chart1" style="height: 345px; border: 1px solid #ccc;"></div>
 	<!-- chart end -->
 </body>
 </html>

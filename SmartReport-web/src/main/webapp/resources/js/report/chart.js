@@ -28,7 +28,7 @@ ReportChart.generate = function(e) {
 			ReportChart.clear();
 			ReportChart.setDimDefaultValue();
 			if (ReportChart.checkStatColumn()) {
-				ReportChart.show("chart1");
+				ReportChart.show("chart1",'bar');
 			}
 		},
 		complete : function() {
@@ -70,8 +70,8 @@ ReportChart.addChart = function(e) {
 
 ReportChart.clear = function() {
 	$("div[id*='chart']").each(function() {
+		$(this).remove();
 		if ($(this).attr("id") != "chart1") {
-			$(this).remove();
 		}
 	});
 };

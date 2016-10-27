@@ -210,3 +210,11 @@ table.form-table {
 	text-indent: 2px;
 	font-family: "Monaco", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
 }
+
+.multiCheckBox {
+    display: inline-block;
+}
+
+.allCheckBox {
+    display: inline-block;
+}

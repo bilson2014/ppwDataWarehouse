@@ -54,14 +54,21 @@ public class EasyUIQueryFormView extends AbstractQueryParamFormView implements Q
         StringBuilder htmlText = new StringBuilder("");
         htmlText.append(String.format("<span class=\"j-item\" data-type=\"checkbox\"><label style=\"width: 120px;\">%s:</label>",
                 checkBoxList.getText()));
+        
+        int index = 0;
         for (HtmlCheckBox checkBox : checkBoxList.getValue()) {
             if (!checkBox.isChecked())
                 isCheckedAll = false;
             String checked = checkBox.isChecked() ? "checked=\"checked\"" : "";
-            htmlText.append(String.format("<input name=\"%s\" type=\"checkbox\" value=\"%s\" data-name=\"%s\" %s/>%s &nbsp;",
-                    checkBoxList.getName(), checkBox.getName(), checkBox.getText(), checked, checkBox.getText()));
+            /*htmlText.append(String.format("<input name=\"%s\" type=\"checkbox\" value=\"%s\" data-name=\"%s\" %s/>%s &nbsp;",
+                    checkBoxList.getName(), checkBox.getName(), checkBox.getText(), checked, checkBox.getText()));*/
+            htmlText.append(String.format("<div class=\"multiCheckBox\"><input name=\"%s\" type=\"checkbox\" value=\"%s\" data-name=\"%s\" id=\"%s\" %s/><label for=\"%s\">%s</label></div>",
+                    checkBoxList.getName(), checkBox.getName(), checkBox.getText(), index, checked, index, checkBox.getText()));
+            index ++;
         }
-        htmlText.append(String.format("<input id=\"checkAllStatColumn\" name=\"checkAllStatColumn\" type=\"checkbox\" %s />全选</span>",
+        /*htmlText.append(String.format("<input id=\"checkAllStatColumn\" name=\"checkAllStatColumn\" type=\"checkbox\" %s />全选</span>",
+                isCheckedAll ? "checked=\"checked\"" : ""));*/
+        htmlText.append(String.format("<div class=\"allCheckBox\"><input id=\"checkAllStatColumn\" name=\"checkAllStatColumn\" type=\"checkbox\" %s /><label for=\"checkAllStatColumn\">全选</label></div></span>",
                 isCheckedAll ? "checked=\"checked\"" : ""));
         return htmlText.toString();
     }
