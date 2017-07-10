@@ -20,7 +20,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pdate</title>
+<title>Pdata</title>
 <link rel="shortcut icon" href="${faviconIco }"/>
 <link rel="stylesheet" href="${easyuiCss }"/>
 <link rel="stylesheet" href="${iconCss }"/>
